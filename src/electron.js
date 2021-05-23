@@ -9,7 +9,7 @@ let mainWindow;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 1500,
+    width: 1400,
     height: 1000,
     resizable: false,
     title: "DIZE",
