@@ -1,0 +1,74 @@
+@import "../../../scss/index.scss";
+
+.song-slider {
+  margin: 30px 0;
+
+  > h2 {
+    font-size: 20px;
+    margin-bottom: 4px !important;
+    font-family: "Montserrat";
+  }
+
+  > h4 {
+    border-bottom: 1px solid $border-grey-light;
+    margin-top: 0 !important;
+    padding-bottom: 12px;
+  }
+
+  &__list {
+    .slick-prev {
+      left: -35px;
+    }
+    .slick-next {
+      right: -35px;
+    }
+
+    &-item {
+      border: none;
+      .container-avatar {
+        overflow: hidden;
+
+        .avatar {
+          height: 180px;
+          object-fit: cover;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.5s ease-in-out;
+
+          i {
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            &:before {
+              font-size: 50px;
+              color: $font-light;
+            }
+          }
+
+          &:hover {
+            transform: scale(1.1, 1.1);
+            cursor: pointer;
+            i {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      p {
+        color: $font-grey;
+        font-size: 10px;
+      }
+
+      h3 {
+        margin-bottom: 0;
+        margin-top: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+}

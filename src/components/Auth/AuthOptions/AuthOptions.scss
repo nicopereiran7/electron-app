@@ -1,0 +1,42 @@
+@import "../../../scss/index.scss";
+
+.auth-options {
+    margin-top: 50px;
+    
+    h2 {
+        font-size: 25px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 50px;
+
+        span {
+            color: $primary-color;
+        }
+    }
+
+    .ui.button.register,
+    .ui.button.login {
+        text-transform: uppercase;
+        width: 100%;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        padding: 14px 0;
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .ui.button.register {
+        background-color: $primary-color;
+        color: $font-light;
+        transition: 0.5s ease;
+        &:hover {
+            background-color: $background-primary-color-hover;
+        }
+    }
+    
+
+    .ui.button.login {
+        background-color: $background-light;
+        color: $font-dark;
+    }
+}

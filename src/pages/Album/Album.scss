@@ -1,0 +1,76 @@
+@import "../../scss/index.scss";
+
+.album {
+    &__header {
+        background: linear-gradient(to top, #333030, #3b0049 100%, transparent 40%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        
+        .info {
+            margin: 20px 50px;
+            display: inline-flex;
+            align-items: flex-end;
+            
+            &__image {
+                .ui.image {
+                    object-fit: cover;
+                    width: 260px;
+                    box-shadow:
+                    0 2.8px 2.2px rgba(0, 0, 0, 0.134),
+                    0 6.7px 5.3px rgba(0, 0, 0, 0.108),
+                    0 12.5px 10px rgba(0, 0, 0, 0.106),
+                    0 22.3px 17.9px rgba(0, 0, 0, 0.292),
+                    0 41.8px 33.4px rgba(0, 0, 0, 0.106),
+                    0 100px 80px rgba(0, 0, 0, 0.12)
+                    ;
+                }
+            }
+
+            &__content {
+                margin-left: 20px;
+                padding-top: 0;
+                h4 {
+                    margin-bottom: 0;
+                }
+                h1 {
+                    margin-top: 0 !important;
+                    padding-top: 0;
+                    font-size: 60px;
+                    font-weight: bolder;
+                    margin-bottom: 0 !important;
+                    color: #fff;
+
+                }
+                p {
+                    font-size: 15px;
+                    font-weight: bolder;
+                    color: #fff;
+
+                    span {
+                        color: $font-light;
+                        font-weight: initial;
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        margin: 20px 50px;
+        .icon {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header {
+            > h4 {
+                border-top: 1px solid $border-grey-light;
+                margin-top: 20px;
+                padding-top: 20px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

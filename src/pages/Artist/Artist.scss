@@ -1,0 +1,14 @@
+@import "../../scss/index.scss";
+
+.artist {
+    height: 100%;
+    padding: 0;
+
+    &__content {
+        margin: 0 50px;
+    }
+
+    &__info {
+        margin: 0 50px;
+    }
+}

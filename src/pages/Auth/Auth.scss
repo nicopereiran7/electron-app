@@ -1,0 +1,42 @@
+@import "../../scss/index.scss";
+
+.auth {
+    background-image: url("../../assets/img/fondo.jpg");
+    min-height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: margin-left 0.3s;
+
+    &__box {
+        margin: auto;
+        position: relative;
+        background: #ff9966;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #250044, $background-grey-dark);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #250044, $background-grey-dark); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        width: 450px;
+        z-index: 1;
+        padding: 50px 70px;
+        border-radius: 10px;
+        box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.186),
+        0 100px 80px rgba(0, 0, 0, 0.12)
+        ;
+        &-logo {
+            text-align: center;
+
+            img {
+                width: 200px;
+            }
+        }
+    }
+}

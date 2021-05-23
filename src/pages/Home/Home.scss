@@ -1,0 +1,8 @@
+@import "../../scss/index.scss";
+
+.home {
+    &__content {
+        padding: 25px 50px;
+        background-color: $background-grey-dark;
+    }
+}

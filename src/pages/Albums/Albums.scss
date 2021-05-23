@@ -1,0 +1,39 @@
+@import "../../scss/index.scss";
+
+.albums {
+    margin: 20px 50px;
+
+    > h1 {
+        border-bottom: 1px solid $border-grey-light;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .ui.grid {
+        display: flex;
+        justify-content: space-between;
+
+        .album__item {
+            text-align: center;
+            object-fit: cover; 
+
+            .avatar {
+                display: flex;
+                justify-content: center;
+            }
+
+            h4 {
+                margin-top: 16px;
+                margin-bottom: 12px;
+                font-size: 14px;
+                color: $font-light;
+            }
+        }
+
+        h3:last-child {
+            margin: 10px 0;
+            font-size: 15px;
+        }
+    }
+}

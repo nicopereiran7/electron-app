@@ -1,0 +1,50 @@
+@import "../../../scss/index.scss";
+
+.basic-slider-items {
+  margin: 30px 0;
+
+  > h2 {
+    font-size: 20px;
+    margin-bottom: 4px !important;
+    font-family: "Montserrat";
+  }
+
+  > h4 {
+    border-bottom: 1px solid $border-grey-light;
+    margin-top: 0 !important;
+    padding-bottom: 12px;
+  }
+
+  &__list {
+    .slick-prev {
+      left: -35px;
+    }
+    .slick-next {
+      right: -35px;
+    }
+
+    &-item {
+      .container-avatar {
+        overflow: hidden;
+        .avatar {
+          height: 180px;
+          object-fit: cover;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          transition: all 0.5s ease-in-out;
+
+          &:hover {
+            transform: scale(1.1, 1.1);
+          }
+        }
+      }
+
+      > h3 {
+        color: $font-grey;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    }
+  }
+}

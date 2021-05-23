@@ -1,0 +1,71 @@
+@import "../../scss/index.scss";
+
+.menu-top {
+    height: 50px;
+    //background-color: $background-grey-dark-light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+
+    &__left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            font-size: 20px !important;
+            margin-right: 16px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .ui.input {
+            > input {
+                margin-left: 10px;
+                width: 260px;
+                background-color: $background-grey-light;
+                color: $font-light;
+                border: 0;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        background-color: #000;
+        border-radius: 20px;
+        padding: 5px 10px;
+        a {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            color: $font-light;
+            transition: 0.3s ease;
+
+            &:hover {
+                color: $primary-color;
+            }
+
+            img {
+                width: 25px;
+                height: 25px;
+                margin-right: 10px;
+                border-radius: 50px;
+            }
+        }
+
+        i {
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

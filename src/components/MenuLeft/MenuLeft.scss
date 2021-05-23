@@ -1,0 +1,48 @@
+@import "../../scss/index.scss";
+
+.ui.menu.vertical.menu-left {
+    display: flex;
+    justify-content: space-between !important;
+    border-radius: 0;
+    background: linear-gradient(to left, #3b0049, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 20px;
+    position: sticky;
+    top: 0;
+
+    .ui.image {
+        width: 150px;
+        margin: auto;
+    }
+
+    .item,
+    a.item {
+        color: $font-grey;
+        font-weight: bold;
+        font-size: 14px;
+        border-left: 4px solid transparent;
+        width: 100%;
+        transition: 0.3s ease all;
+
+        &:hover,
+        &.active {
+            color: $font-light !important;
+            cursor: pointer;
+        }
+
+        &.active {
+            border-color: $primary-color;
+            background-color: $background-dark-hover !important;
+        }
+    }
+
+    .footer {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column-reverse;
+        transition: 0.5s ease all;
+    }
+}

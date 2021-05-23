@@ -1,0 +1,31 @@
+@import "../../scss/index.scss";
+
+.artists {
+    margin: 20px 50px;
+
+    > h1 {
+        border-bottom: 1px solid $border-grey-light;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+
+    &__item {
+        margin-bottom: 30px;
+        object-fit: cover;
+        width: 100%;
+
+        .avatar {
+          display: flex;
+          justify-content: center;
+        }
+    }
+}
+
+.ui.avatar.image {
+  margin-right: 0 !important;
+}
+
+
+
+
