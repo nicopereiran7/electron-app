@@ -16,21 +16,24 @@ export default function Home(props) {
   const [artists, setArtists] = useState([]);
   const [albums, setAlbums] = useState([]);
   const [songs, setSongs] = useState([]);
-  const [artistName, setArtistName] = useState(null);
+  //const [artistName, setArtistName] = useState(null);
 
-  useEffect(async () => {
-    await db
-      .collection("artists")
-      .get()
-      .then((response) => {
-        const arrayArtists = [];
-        map(response?.docs, (artist) => {
-          const data = artist.data();
-          data.id = artist.id;
-          arrayArtists.push(data);
+  useEffect(() => {
+    async function fechData() {
+      await db
+        .collection("artists")
+        .get()
+        .then((response) => {
+          const arrayArtists = [];
+          map(response?.docs, (artist) => {
+            const data = artist.data();
+            data.id = artist.id;
+            arrayArtists.push(data);
+          });
+          setArtists(arrayArtists);
         });
-        setArtists(arrayArtists);
-      });
+    }
+    fechData();
   }, []);
 
   useEffect(() => {

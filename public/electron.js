@@ -9,12 +9,15 @@ let mainWindow;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 1400,
-    height: 1000,
-    resizable: false,
+    width: 1300,
+    height: 700,
+    minWidth: 1200,
+    minHeight: 600,
     title: "DIZE",
-    titleBarStyle: "hiddenInset",
+    titleBarStyle: "hidden",
+    darkTheme: true,
   });
+  mainWindow.setMenuBarVisibility(false);
   mainWindow.loadURL(
     isDev
       ? "http://localhost:3000"

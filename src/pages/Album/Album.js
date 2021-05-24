@@ -18,20 +18,23 @@ function Album(props) {
   const [artist, setArtist] = useState(null);
   const [songs, setSongs] = useState([]);
 
-  useEffect(async () => {
-    await db
-      .collection("albums")
-      .doc(match?.params.id)
-      .get()
-      .then((response) => {
-        const data = response.data();
-        data.id = response.id;
-        setAlbum(data);
-      });
+  useEffect(() => {
+    async function fechData() {
+      await db
+        .collection("albums")
+        .doc(match?.params.id)
+        .get()
+        .then((response) => {
+          const data = response.data();
+          data.id = response.id;
+          setAlbum(data);
+        });
+    }
+    fechData();
   }, [match]);
 
-  useEffect(async () => {
-    if (album) {
+  useEffect(() => {
+    async function fechData() {
       await firebase
         .storage()
         .ref(`album/${album?.banner}`)
@@ -40,10 +43,13 @@ function Album(props) {
           setAlbumImage(url);
         });
     }
+    if (album) {
+      fechData();
+    }
   }, [album]);
 
-  useEffect(async () => {
-    if (album) {
+  useEffect(() => {
+    async function fechData() {
       await db
         .collection("artists")
         .doc(album?.artist)
@@ -52,11 +58,15 @@ function Album(props) {
           setArtist(response.data());
         });
     }
+    if (album) {
+      fechData();
+    }
   }, [album]);
 
   useEffect(() => {
-    if (album) {
-      db.collection("songs")
+    async function fechData() {
+      await db
+        .collection("songs")
         .where("album", "==", album.id)
         .get()
         .then((response) => {
@@ -68,6 +78,9 @@ function Album(props) {
           });
           setSongs(arraySongs);
         });
+    }
+    if (album) {
+      fechData();
     }
   }, [album]);
 
@@ -102,7 +115,11 @@ function Album(props) {
           <Icon name="clock outline" size="large" />
         </div>
         <div className="header">
-          <ListSongs songs={songs} albumImage={albumImage} playedSong={playedSong}/>
+          <ListSongs
+            songs={songs}
+            albumImage={albumImage}
+            playedSong={playedSong}
+          />
         </div>
         <div className="more">
           <h2>Mas de {artist.name}</h2>
